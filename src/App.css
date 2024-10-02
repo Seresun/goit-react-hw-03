@@ -1,88 +1,94 @@
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif; /* Используем простой и чёткий шрифт */
+  background-color: #f9f9f9; /* Светлый фон */
+  color: black; /* Чёрный шрифт */
 }
 
-.heading {
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white; /* Белый фон для основного контейнера */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
+h1 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.form {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
+/* Стили формы добавления контакта */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.form input {
-  display: block;
-  width: calc(100% - 20px);
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+input[type="text"], input[type="number"] {
+  padding: 8px;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.form button {
-  padding: 10px 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.form button:hover {
-  background-color: #ccc;
+button:hover {
+  background-color: #45a049;
 }
 
+/* Стили для поиска */
+input[type="text"] {
+  width: 100%;
+}
+
+/* Стили для списка контактов */
 .contact-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.contact {
+.contact-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: #fff;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact svg {
-  margin-right: 10px;
+.contact-item p {
+  margin: 0;
 }
 
-.contact button {
-  margin-left: auto;
-  padding: 5px 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
+.contact-item button {
+  background-color: #f44336;
 }
 
-.contact button:hover {
-  background-color: #ccc;
+.contact-item button:hover {
+  background-color: #e53935;
 }
 
-.contact-info {
-  font-size: 1rem;
-  color: #333;
-}
-
-.required {
-  color: red;
-  font-size: 0.875rem;
-  margin-top: -5px;
-  margin-bottom: 10px;
+/* Стили иконок */
+.icon {
+  margin-right: 8px;
 }
